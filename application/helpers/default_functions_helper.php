@@ -145,6 +145,12 @@ function cleanInjection($data,$type = ""){
 
 }
 
-
+## Shorter ##
+function shorter($par, $uzunluk = 50){
+    if(strlen($par) > $uzunluk){
+        $par = mb_substr($par, 0, $uzunluk, "UTF-8")."..";
+    }
+    return $par;
+}
 
 
